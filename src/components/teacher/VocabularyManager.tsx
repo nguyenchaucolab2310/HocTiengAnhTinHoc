@@ -12,7 +12,8 @@ import {
   X,
   Volume2,
   Sparkles,
-  Layers
+  Layers,
+  FileSpreadsheet
 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { VocabularyItem, GradeLevel, TopicItem, WordLevel, WordSourceType } from '../../types';
@@ -23,12 +24,14 @@ interface VocabularyManagerProps {
   vocabulary: VocabularyItem[];
   topics: TopicItem[];
   onUpdateVocabulary: (vocab: VocabularyItem[]) => void;
+  onNavigateTab?: (tab: string) => void;
 }
 
 export const VocabularyManager: React.FC<VocabularyManagerProps> = ({
   vocabulary,
   topics,
-  onUpdateVocabulary
+  onUpdateVocabulary,
+  onNavigateTab
 }) => {
   const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(12);
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
@@ -218,7 +221,16 @@ export const VocabularyManager: React.FC<VocabularyManagerProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          {onNavigateTab && (
+            <button
+              onClick={() => onNavigateTab('teacher-excel')}
+              className="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-md shadow-amber-500/20 transition-all flex items-center gap-1.5 cursor-pointer"
+            >
+              <FileSpreadsheet className="w-4 h-4" />
+              <span>Nhập từ vựng (Excel)</span>
+            </button>
+          )}
           <button
             onClick={handleOpenAdd}
             className="px-4 py-2.5 rounded-xl bg-[#0866D9] hover:bg-[#073B86] text-white font-bold text-xs shadow-md shadow-[#0866D9]/20 transition-all flex items-center gap-1.5 cursor-pointer"

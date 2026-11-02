@@ -34,12 +34,16 @@ export function App() {
   const [currentUser, setCurrentUser] = useState<UserProfile>(() => StorageService.getCurrentUser());
   const [currentTab, setCurrentTab] = useState<string>('home');
   const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(12);
-  const [selectedLessonId, setSelectedLessonId] = useState<string>('les-12-3-1');
+  const [selectedLessonId, setSelectedLessonId] = useState<string>('all');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Data Collections
   const [vocabulary, setVocabulary] = useState<VocabularyItem[]>(() => StorageService.getVocabulary());
-  const [topics, setTopics] = useState<TopicItem[]>(() => StorageService.getTopics());
+  const [topics, setTopics] = useState<TopicItem[]>(() => {
+    const rawVocab = StorageService.getVocabulary();
+    const rawTopics = StorageService.getTopics();
+    return StorageService.syncTopicsWithVocabulary(rawVocab, rawTopics);
+  });
   const [classrooms, setClassrooms] = useState<Classroom[]>(() => StorageService.getClassrooms());
   const [assignments, setAssignments] = useState<Assignment[]>(() => StorageService.getAssignments());
   const [notifications, setNotifications] = useState<NotificationItem[]>(() => StorageService.getNotifications());
@@ -66,6 +70,19 @@ export function App() {
     setVocabulary(StorageService.getVocabulary());
     const updatedProg = StorageService.getStudentProgress(currentUser.id);
     setStudentProgress(updatedProg);
+  };
+
+  const handleUpdateVocabulary = (newVocab: VocabularyItem[]) => {
+    setVocabulary(newVocab);
+    StorageService.saveVocabulary(newVocab);
+    const updatedTopics = StorageService.syncTopicsWithVocabulary(newVocab, topics);
+    setTopics(updatedTopics);
+    StorageService.saveTopics(updatedTopics);
+  };
+
+  const handleUpdateTopics = (newTopics: TopicItem[]) => {
+    setTopics(newTopics);
+    StorageService.saveTopics(newTopics);
   };
 
   const handleResetApp = () => {
@@ -144,6 +161,8 @@ export function App() {
               onToggleFavorite={handleToggleFavorite}
               onToggleLearned={handleToggleLearned}
               onNavigateTab={setCurrentTab}
+              onUpdateVocabulary={handleUpdateVocabulary}
+              onUpdateTopics={handleUpdateTopics}
             />
           )}
 
@@ -179,6 +198,8 @@ export function App() {
               currentUser={currentUser}
               selectedGrade={selectedGrade}
               selectedLessonId={selectedLessonId}
+              onChangeGrade={setSelectedGrade}
+              onChangeLesson={setSelectedLessonId}
               onNavigateTab={setCurrentTab}
             />
           )}
@@ -228,14 +249,18 @@ export function App() {
             <VocabularyManager
               vocabulary={vocabulary}
               topics={topics}
-              onUpdateVocabulary={setVocabulary}
+              onUpdateVocabulary={handleUpdateVocabulary}
+              onNavigateTab={setCurrentTab}
             />
           )}
 
           {currentTab === 'teacher-excel' && (
             <ExcelImportExport
               vocabulary={vocabulary}
-              onUpdateVocabulary={setVocabulary}
+              topics={topics}
+              onUpdateVocabulary={handleUpdateVocabulary}
+              onUpdateTopics={handleUpdateTopics}
+              onNavigateTab={setCurrentTab}
             />
           )}
 
@@ -243,7 +268,7 @@ export function App() {
             <AIAssistant
               vocabulary={vocabulary}
               topics={topics}
-              onUpdateVocabulary={setVocabulary}
+              onUpdateVocabulary={handleUpdateVocabulary}
             />
           )}
 

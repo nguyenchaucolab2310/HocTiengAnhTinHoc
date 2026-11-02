@@ -39,8 +39,15 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
   onNavigateTab
 }) => {
   const currentGradeTopics = topics.filter(t => t.grade === selectedGrade);
-  const wordsForLesson = vocabulary.filter(v => v.grade === selectedGrade && (!selectedLessonId || v.lessonId === selectedLessonId));
-  const activePool = wordsForLesson.length >= 4 ? wordsForLesson : vocabulary.filter(v => v.grade === selectedGrade);
+  const currentGradeWords = vocabulary.filter(v => v.grade === selectedGrade);
+  const wordsForLesson = vocabulary.filter(v => {
+    if (v.grade !== selectedGrade) return false;
+    if (selectedLessonId && selectedLessonId !== 'all') {
+      return v.lessonId === selectedLessonId;
+    }
+    return true;
+  });
+  const activePool = wordsForLesson.length >= 4 ? wordsForLesson : (currentGradeWords.length >= 4 ? currentGradeWords : vocabulary);
 
   const [activeMode, setActiveMode] = useState<PracticeMode>('multiple-choice');
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -235,13 +242,16 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
         {/* Lesson selector */}
         <div className="w-full md:w-auto">
           <select
-            value={selectedLessonId}
+            value={selectedLessonId || 'all'}
             onChange={(e) => {
               onChangeLesson(e.target.value);
               handleRestart();
             }}
-            className="w-full md:w-64 bg-[#EAF5FF] border border-[#1388F5]/30 text-[#061D49] text-xs rounded-xl px-3 py-2 font-bold focus:outline-none"
+            className="w-full md:w-80 bg-[#EAF5FF] border border-[#1388F5]/30 text-[#061D49] text-xs rounded-xl px-3 py-2 font-bold focus:outline-none cursor-pointer"
           >
+            <option value="all">
+              📚 Tất cả bài học (Toàn bộ {currentGradeWords.length} từ vựng Lớp {selectedGrade})
+            </option>
             {currentGradeTopics.map(topic => (
               <optgroup key={topic.id} label={topic.name}>
                 {topic.lessons.map(lesson => (

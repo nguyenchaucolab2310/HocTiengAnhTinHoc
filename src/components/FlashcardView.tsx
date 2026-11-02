@@ -39,9 +39,16 @@ export const FlashcardView: React.FC<FlashcardViewProps> = ({
   onNavigateTab
 }) => {
   const currentGradeTopics = topics.filter(t => t.grade === selectedGrade);
+  const currentGradeWords = vocabulary.filter(v => v.grade === selectedGrade);
 
-  // Deck of words for this lesson
-  const deckWords = vocabulary.filter(v => v.grade === selectedGrade && (!selectedLessonId || v.lessonId === selectedLessonId));
+  // Deck of words for this lesson or all
+  const deckWords = vocabulary.filter(v => {
+    if (v.grade !== selectedGrade) return false;
+    if (selectedLessonId && selectedLessonId !== 'all') {
+      return v.lessonId === selectedLessonId;
+    }
+    return true;
+  });
   
   const [cards, setCards] = useState<VocabularyItem[]>(deckWords);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -136,10 +143,13 @@ export const FlashcardView: React.FC<FlashcardViewProps> = ({
         {/* Lesson selector */}
         <div className="flex items-center gap-2 w-full md:w-auto">
           <select
-            value={selectedLessonId}
+            value={selectedLessonId || 'all'}
             onChange={(e) => onChangeLesson(e.target.value)}
-            className="w-full md:w-72 bg-[#EAF5FF] border border-[#1388F5]/30 text-[#061D49] text-xs rounded-xl px-3 py-2.5 font-bold focus:outline-none"
+            className="w-full md:w-80 bg-[#EAF5FF] border border-[#1388F5]/30 text-[#061D49] text-xs rounded-xl px-3 py-2.5 font-bold focus:outline-none cursor-pointer"
           >
+            <option value="all">
+              📚 Tất cả bài học (Toàn bộ {currentGradeWords.length} từ vựng Lớp {selectedGrade})
+            </option>
             {currentGradeTopics.map(topic => (
               <optgroup key={topic.id} label={topic.name}>
                 {topic.lessons.map(lesson => (

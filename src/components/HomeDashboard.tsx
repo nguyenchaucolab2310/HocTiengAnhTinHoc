@@ -195,10 +195,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
                         key={g}
                         onClick={() => {
                           onChangeGrade(g);
-                          const firstTopic = topics.find(t => t.grade === g);
-                          if (firstTopic && firstTopic.lessons.length > 0) {
-                            onChangeLesson(firstTopic.lessons[0].id);
-                          }
+                          onChangeLesson('all');
                         }}
                         className={`py-2 px-1 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1 cursor-pointer ${
                           isSelected
@@ -242,10 +239,13 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
                 </label>
                 <div className="relative">
                   <select
-                    value={selectedLessonId}
+                    value={selectedLessonId || 'all'}
                     onChange={(e) => onChangeLesson(e.target.value)}
                     className="w-full bg-white border border-slate-200 text-slate-800 text-xs rounded-xl px-3 py-2 font-medium appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#0866D9]"
                   >
+                    <option value="all">
+                      📚 Tất cả bài học (Toàn bộ từ vựng Lớp {selectedGrade})
+                    </option>
                     {currentGradeTopics.map((topic) => (
                       <optgroup key={topic.id} label={topic.name}>
                         {topic.lessons.map((lesson) => (
