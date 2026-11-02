@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  @font-face {
+    font-family: 'Furuta';
+    src: local('Furuta'), local('Be Vietnam Pro');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Furuta', 'Be Vietnam Pro', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #061D49;
+    background-color: #EAF5FF;
+    overflow-x: hidden;
+  }
+}
+
+/* 3D Flip Card for Flashcards */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EAF5FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #B6D9F9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0866D9;
+}

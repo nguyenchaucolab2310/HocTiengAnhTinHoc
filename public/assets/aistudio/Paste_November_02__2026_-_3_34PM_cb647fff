@@ -1,0 +1,984 @@
+# VAI TRÒ VÀ NHIỆM VỤ
+
+Bạn hãy đóng vai một nhóm chuyên gia gồm:
+
+1. Chuyên gia thiết kế giao diện UI/UX cho website giáo dục hiện đại.
+2. Lập trình viên Full-stack chuyên nghiệp có kinh nghiệm xây dựng hệ thống quản lý học tập (LMS).
+3. Giáo viên Tin học THPT giàu kinh nghiệm, am hiểu Chương trình Giáo dục phổ thông 2018.
+4. Chuyên gia tiếng Anh chuyên ngành Công nghệ thông tin.
+5. Chuyên gia thiết kế trò chơi giáo dục, Flashcard và hệ thống kiểm tra đánh giá.
+6. Chuyên gia về cơ sở dữ liệu Firebase, bảo mật tài khoản và quản lý kết quả học tập.
+
+**NHIỆM VỤ CHÍNH:**
+
+Hãy xây dựng một WEBSITE HỌC TỪ VỰNG TIẾNG ANH CHUYÊN NGÀNH TIN HỌC THPT hoàn chỉnh, có tên:
+
+**IT ENGLISH LEARNING**
+
+Tên tiếng Việt: **HỌC TỪ VỰNG TIẾNG ANH CHUYÊN NGÀNH TIN HỌC THPT**
+
+Thông tin chính thức hiển thị trên website:
+
+- Trường: **TRƯỜNG PT DTNT THPT BÌNH THUẬN**
+- Giáo viên: **NGUYỄN THỊ CHÂU**
+- Môn học: **TIN HỌC**
+- Cấp học: **TRUNG HỌC PHỔ THÔNG**
+- Bộ sách: **KẾT NỐI TRI THỨC VỚI CUỘC SỐNG**
+- Đối tượng: Học sinh lớp 10, 11 và 12.
+- Khẩu hiệu: **Learn IT English – Khám phá công nghệ, chinh phục tiếng Anh.**
+
+Website phải có giao diện đẹp, hiện đại, thân thiện, dễ sử dụng và thực sự phục vụ việc giảng dạy, học tập, tự học và kiểm tra đánh giá.
+
+YÊU CẦU BẮT BUỘC: Tạo ứng dụng web có mã nguồn và chức năng hoạt động thực tế. Không tạo một ảnh tĩnh, trang giới thiệu đơn giản hoặc bản mô phỏng với những nút không có chức năng.
+
+---
+
+# PHẦN I. THIẾT KẾ GIAO DIỆN THEO ẢNH MẪU
+
+## 1. Giao diện tổng thể
+
+Sử dụng hình ảnh tôi tải lên làm **ảnh tham chiếu UI/UX chính**.
+
+Hãy phân tích ảnh về:
+
+- Bố cục các khu vực.
+- Vị trí thanh menu.
+- Cách thiết kế banner.
+- Màu sắc và sắc độ.
+- Các thẻ chức năng.
+- Hình minh họa.
+- Cách trình bày các nút.
+- Cách bố trí khu vực học sinh và giáo viên.
+- Khoảng cách, đường viền, bóng đổ và hiệu ứng.
+- Tỷ lệ kích thước và hệ thống phân cấp nội dung.
+
+Tạo giao diện website giống ảnh tham chiếu ở mức cao nhất có thể, đồng thời cải tiến để đẹp, cân đối, chuyên nghiệp và dễ sử dụng hơn.
+
+Không tự ý thay đổi phong cách thiết kế chủ đạo.
+
+Ưu tiên thiết kế giao diện desktop theo **tỷ lệ 16:9**, đặc biệt phù hợp màn hình 1920 × 1080 và 1600 × 900.
+
+Thiết kế Responsive để hiển thị tốt trên laptop, máy tính bảng và điện thoại. Không ép toàn bộ giao diện 16:9 trên điện thoại; trên màn hình nhỏ, các khu vực phải tự sắp xếp lại hợp lý.
+
+## 2. Bảng màu chủ đạo
+
+Sử dụng hệ thống màu xanh công nghệ hiện đại:
+
+- Xanh navy đậm: #061D49
+- Xanh dương đậm: #073B86
+- Xanh công nghệ: #0866D9
+- Xanh sáng: #1388F5
+- Xanh cyan: #16D8FF
+- Xanh nhạt nền: #EAF5FF
+- Trắng: #FFFFFF
+- Xanh lá thành công: #12B981
+- Vàng điểm thưởng: #F5B827
+- Tím nhạt: #7957E8
+
+Phối màu theo ảnh tham chiếu.
+
+Yêu cầu:
+
+- Thanh điều hướng bên trái màu xanh navy.
+- Header sử dụng gradient xanh công nghệ.
+- Các nút chính có gradient xanh dương.
+- Thẻ chức năng nền trắng hoặc pastel xanh, tím, xanh lá nhạt.
+- Nền tổng thể xanh rất nhạt.
+- Các ô thống kê sử dụng màu nền tương phản nhẹ.
+- Hiệu ứng ánh sáng cyan tinh tế.
+- Góc bo tròn từ 12px đến 20px.
+- Bóng đổ mềm, tạo cảm giác hiện đại.
+- Hover có hiệu ứng chuyển màu nhẹ hoặc nâng thẻ.
+- Chữ phải rõ ràng, tương phản tốt, tránh rối mắt.
+
+## 3. Phông chữ
+
+**Ưu tiên phông chữ FURUTA cho toàn bộ website theo yêu cầu của tôi.**
+
+Nếu có tệp phông Furuta hợp pháp do tôi cung cấp, hãy tích hợp bằng @font-face, hỗ trợ đầy đủ tiếng Việt có dấu.
+
+Nếu không có tệp phông Furuta hoặc không xác định được nguồn phông hợp pháp, không được tự nhận rằng đã cài đặt thành công. Hãy chuẩn bị sẵn cấu hình cho Furuta và dùng Be Vietnam Pro hoặc Nunito làm phông thay thế tạm thời.
+
+Yêu cầu tất cả chữ tiếng Việt phải hiển thị chính xác dấu, không bị lỗi mã hóa, tràn khung hoặc cắt chữ.
+
+## 4. Bố cục 3 khu vực
+
+### KHU VỰC A – HEADER
+
+Header ở phía trên cùng, gồm:
+
+Bên trái:
+- Logo biểu tượng giáo dục và công nghệ.
+- Dòng chữ lớn: IT ENGLISH LEARNING.
+
+Chính giữa:
+- TRƯỜNG PT DTNT THPT BÌNH THUẬN.
+- Học từ vựng tiếng Anh chuyên ngành Tin học THPT.
+- Giáo viên: Nguyễn Thị Châu.
+
+Bên phải:
+- Biểu tượng thông báo.
+- Ảnh đại diện người dùng.
+- Họ tên học sinh hoặc giáo viên.
+- Lớp đang học.
+- Menu tài khoản: Hồ sơ, Đổi cài đặt, Đăng xuất.
+
+Nếu chưa có ảnh thật hoặc logo chính thức của trường, dùng ảnh minh họa trung tính và vị trí thay thế rõ ràng. Không tự tạo logo hay ảnh ngôi trường rồi thể hiện đó là hình ảnh chính thức.
+
+### KHU VỰC B – THANH MENU BÊN TRÁI
+
+Thiết kế sidebar màu xanh navy, có biểu tượng Lucide và tên chức năng.
+
+Nhóm HỌC TẬP:
+
+1. Trang chủ
+2. Học từ vựng
+3. Flashcard
+4. Luyện tập
+5. Kiểm tra
+6. Kết quả học tập
+7. Kho từ yêu thích
+
+Nhóm DÀNH CHO GIÁO VIÊN:
+
+8. Quản lý lớp học
+9. Giao bài và kiểm tra
+10. Thống kê – Báo cáo
+11. Quản lý ngân hàng từ vựng
+12. Nhập từ vựng Excel
+
+Nhóm HỆ THỐNG:
+
+13. Quản trị và phân quyền
+14. Hướng dẫn sử dụng
+
+Menu phải có cơ chế phân quyền:
+
+- Học sinh chỉ nhìn thấy chức năng học sinh.
+- Giáo viên nhìn thấy chức năng chuyên môn được phân quyền.
+- Quản trị viên có thêm chức năng quản trị hệ thống.
+- Không chỉ ẩn menu, mà phải kiểm tra quyền thật ở tầng dữ liệu và máy chủ.
+
+Khi bấm vào một mục, nội dung tương ứng phải xuất hiện. Menu đang chọn được đánh dấu bằng màu xanh sáng.
+
+### KHU VỰC C – NỘI DUNG CHÍNH
+
+Phía trên là banner lớn với:
+
+- Tiêu đề: IT ENGLISH LEARNING.
+- Phụ đề: Học từ vựng tiếng Anh chuyên ngành Tin học THPT.
+- Khẩu hiệu đã quy định.
+- Hình laptop, AI, sách công nghệ, tai nghe, biểu tượng mạng, lập trình và thiết bị số.
+
+Bên dưới bố trí ba vùng:
+
+**Vùng trung tâm bên trái:**
+
+Thẻ lựa chọn nội dung học, gồm:
+- Chọn khối lớp.
+- Chọn bộ sách.
+- Chọn chủ đề.
+- Chọn bài học.
+- Nút BẮT ĐẦU HỌC.
+
+**Vùng trung tâm:**
+
+Lưới 6 thẻ chức năng:
+
+1. Học từ vựng.
+2. Flashcard.
+3. Luyện tập.
+4. Kiểm tra.
+5. Kết quả học tập.
+6. Kho từ yêu thích.
+
+Mỗi thẻ có biểu tượng, màu pastel khác nhau, tên chức năng, mô tả ngắn và hiệu ứng hover.
+
+**Vùng bên phải:**
+
+Có hai bảng:
+
+Bảng TIẾN ĐỘ HỌC TẬP:
+- Biểu đồ tròn phần trăm hoàn thành.
+- Số từ đã học.
+- Số bài hoàn thành.
+- Điểm trung bình.
+- Nút XEM CHI TIẾT.
+
+Bảng THÔNG BÁO:
+- Bài học mới.
+- Bài tập được giao.
+- Hạn nộp bài kiểm tra.
+- Thông báo từ giáo viên.
+
+Phía dưới toàn bộ khu vực trung tâm là:
+
+**CẤU TRÚC NỘI DUNG THEO SÁCH GIÁO KHOA**
+
+Hiển thị ba thẻ lớn:
+- TIN HỌC 10.
+- TIN HỌC 11.
+- TIN HỌC 12.
+
+Mỗi thẻ có hình minh họa sách, danh sách chủ đề, biểu tượng và nút xem nội dung.
+
+---
+
+# PHẦN II. CẤU TRÚC NỘI DUNG THEO SÁCH GIÁO KHOA
+
+Xây dựng hệ thống học tập cho SGK Tin học 10, 11 và 12 thuộc bộ **KẾT NỐI TRI THỨC VỚI CUỘC SỐNG**.
+
+Ưu tiên định hướng Tin học ứng dụng ở lớp 11 và lớp 12.
+
+Cấu trúc dữ liệu bắt buộc:
+
+KHỐI LỚP → BỘ SÁCH → ĐỊNH HƯỚNG → CHỦ ĐỀ → BÀI HỌC → TỪ VỰNG → HOẠT ĐỘNG HỌC TẬP → KẾT QUẢ.
+
+## Khối 10
+
+Chuẩn bị các nhóm nội dung như:
+- Máy tính và xã hội tri thức.
+- Mạng máy tính và Internet.
+- Đạo đức, pháp luật và văn hóa trong môi trường số.
+- Ứng dụng Tin học.
+- Giải quyết vấn đề với sự trợ giúp của máy tính.
+- Hướng nghiệp với Tin học.
+
+Ví dụ từ vựng:
+Information, Data, Computer, Network, Internet, Software, Hardware, Algorithm, Variable, Loop, Function, Programming.
+
+## Khối 11 – Định hướng Tin học ứng dụng
+
+Chuẩn bị các nhóm nội dung:
+- Hệ điều hành.
+- Lưu trữ và tìm kiếm thông tin.
+- Giao tiếp trong môi trường số.
+- Cơ sở dữ liệu.
+- Hệ quản trị cơ sở dữ liệu.
+- Thực hành cơ sở dữ liệu và SQL.
+- Phần mềm chỉnh sửa ảnh, video.
+- Các nội dung hướng nghiệp và thực hành phù hợp.
+
+Ví dụ từ vựng:
+Operating System, File, Folder, Database, Table, Record, Field, Query, Primary Key, Image, Layer, Timeline.
+
+## Khối 12 – Định hướng Tin học ứng dụng
+
+Chuẩn bị các nhóm nội dung:
+- Trí tuệ nhân tạo.
+- Mạng máy tính và Internet.
+- Ứng xử có trách nhiệm trong môi trường số.
+- Thiết kế trang web.
+- HTML và cấu trúc trang web.
+- Định dạng trang web với CSS.
+- Thực hành xây dựng website.
+- Hướng nghiệp trong lĩnh vực công nghệ thông tin.
+
+Đặc biệt phải chuẩn bị bài học:
+
+**BÀI 7 – HTML VÀ CẤU TRÚC TRANG WEB**
+
+Ví dụ từ vựng:
+HTML, Website, Webpage, Browser, Tag, Element, Attribute, Hyperlink, Heading, Paragraph, Source Code.
+
+**QUY TẮC VỀ SGK:**
+
+- Không tự khẳng định những từ ví dụ trên đều xuất hiện trong SGK.
+- Các từ ví dụ được khởi tạo với nhãn "Từ gợi ý – cần đối chiếu".
+- Chỉ gắn nhãn "Từ trong SGK" khi giáo viên đã xác minh.
+- Không tự bịa số trang, số bài hoặc tên bài học.
+- Tạo chức năng cho phép giáo viên nhập danh mục bài học chính xác từ SGK.
+- Khi tôi tải SGK dạng PDF hoặc ảnh lên, hãy hỗ trợ trích xuất mục lục, đề xuất chủ đề, bài học và thuật ngữ để giáo viên duyệt.
+- Nếu không có đủ tài liệu SGK, chỉ khởi tạo nội dung đã biết và các danh mục đang chờ xác minh.
+- Không sao chép nguyên văn các đoạn nội dung dài hoặc hình ảnh có bản quyền của SGK.
+
+---
+
+# PHẦN III. PHÂN HỆ HỌC SINH
+
+## 1. Tài khoản học sinh
+
+Mỗi học sinh có tài khoản gắn với:
+
+- Mã học sinh.
+- Họ tên.
+- Lớp.
+- Năm học.
+- Trạng thái tham gia.
+- Lịch sử học tập.
+
+Hỗ trợ đăng nhập bằng Google thông qua Firebase Authentication.
+
+Học sinh đăng nhập lần đầu phải được liên kết với lớp do giáo viên quản lý. Không được tự ý chọn quyền giáo viên hoặc quản trị viên.
+
+Hỗ trợ chức năng giáo viên tạo mã mời tham gia lớp có thời hạn.
+
+## 2. Học từ vựng
+
+Mỗi bài học phải có danh sách từ vựng gồm:
+
+- Từ tiếng Anh.
+- Phiên âm IPA.
+- Nghĩa tiếng Việt theo ngữ cảnh Tin học.
+- Loại từ.
+- Phát âm tiếng Anh.
+- Hình minh họa nếu có.
+- Câu ví dụ bằng tiếng Anh.
+- Dịch nghĩa câu ví dụ.
+- Giải thích thuật ngữ trong môn Tin học.
+- Loại từ: cơ bản, trong SGK đã xác minh hoặc mở rộng.
+- Độ khó: dễ, trung bình, nâng cao.
+
+Thiết kế giao diện học từ đẹp, trực quan.
+
+Có các nút:
+- Nghe phát âm.
+- Từ tiếp theo.
+- Từ trước.
+- Đánh dấu đã thuộc.
+- Đánh dấu chưa thuộc.
+- Thêm vào yêu thích.
+- Xem ví dụ.
+- Học lại.
+
+Tích hợp Web Speech API để phát âm tiếng Anh khi trình duyệt hỗ trợ.
+
+Nếu trình duyệt không hỗ trợ hoặc không có giọng đọc tiếng Anh, phải hiện thông báo rõ ràng.
+
+## 3. Flashcard tương tác
+
+Tạo giao diện Flashcard có hiệu ứng lật thẻ 3D.
+
+Mặt trước:
+- Từ tiếng Anh.
+- Phiên âm.
+- Nút nghe.
+
+Mặt sau:
+- Nghĩa tiếng Việt.
+- Giải thích.
+- Ví dụ.
+- Hình minh họa.
+
+Có lựa chọn:
+- Đã nhớ.
+- Cần ôn tập.
+- Chưa thuộc.
+
+Có thanh tiến độ số thẻ đã học.
+
+Kết hợp ôn tập ngắt quãng (Spaced Repetition) theo mức độ ghi nhớ.
+
+Lưu dữ liệu học Flashcard theo tài khoản học sinh.
+
+## 4. Luyện tập từ vựng
+
+Tạo ít nhất 6 hình thức tương tác:
+
+**Dạng 1: Trắc nghiệm**
+
+Cho từ tiếng Anh và 4 đáp án nghĩa tiếng Việt.
+
+**Dạng 2: Ghép cặp**
+
+Kéo thả từ tiếng Anh với nghĩa tiếng Việt tương ứng.
+
+**Dạng 3: Điền khuyết**
+
+Hiển thị câu tiếng Anh và yêu cầu nhập từ thiếu.
+
+**Dạng 4: Nghe và chọn**
+
+Phát âm từ tiếng Anh, học sinh chọn từ nghe được.
+
+**Dạng 5: Sắp xếp chữ cái**
+
+Xáo trộn chữ cái để học sinh sắp xếp thành từ đúng.
+
+**Dạng 6: Sử dụng từ trong ngữ cảnh Tin học**
+
+Cho một tình huống trong bài học, yêu cầu chọn thuật ngữ phù hợp.
+
+Yêu cầu:
+- Tự động kiểm tra câu trả lời.
+- Thông báo đúng hoặc sai.
+- Giải thích đáp án.
+- Cho phép làm lại theo quy định của giáo viên.
+- Có điểm, thời gian và thanh tiến độ.
+- Lưu câu trả lời để theo dõi những từ học sinh thường nhầm.
+
+## 5. Kiểm tra đánh giá
+
+Tạo hệ thống kiểm tra gồm:
+
+- Kiểm tra theo bài.
+- Kiểm tra theo chủ đề.
+- Kiểm tra từ vựng tổng hợp.
+- Kiểm tra trước khi học.
+- Kiểm tra sau khi học.
+
+Giáo viên cài đặt được:
+- Số câu hỏi.
+- Thời gian làm bài.
+- Số lần được làm.
+- Điểm tối đa.
+- Hạn nộp.
+- Có hoặc không hiển thị đáp án ngay.
+- Trộn câu hỏi và đáp án.
+- Quy định lấy điểm cao nhất, điểm lần đầu hoặc điểm lần cuối.
+
+Điểm tự động quy đổi theo thang 10.
+
+Lưu thời gian bắt đầu, kết thúc, từng câu trả lời, số câu đúng, điểm và lần làm bài.
+
+Chấm điểm chính thức phải được kiểm tra tại máy chủ hoặc cơ chế đáng tin cậy, không chỉ dựa trên dữ liệu điểm do trình duyệt học sinh gửi lên.
+
+Không cho học sinh sửa kết quả của mình.
+
+## 6. Kết quả học tập cá nhân
+
+Tạo dashboard gồm:
+
+- Tổng số từ đã học.
+- Số từ đã thuộc.
+- Số từ cần ôn.
+- Số bài đã hoàn thành.
+- Điểm trung bình.
+- Lịch sử kiểm tra.
+- Biểu đồ tiến bộ.
+- Tỷ lệ hoàn thành nhiệm vụ.
+- Các bài chưa làm.
+- Những từ cần học lại.
+
+Học sinh chỉ xem được kết quả cá nhân.
+
+## 7. Kho từ yêu thích
+
+Cho phép:
+- Lưu từ quan trọng.
+- Tạo bộ từ tự học.
+- Tìm kiếm.
+- Lọc theo lớp, bài và chủ đề.
+- Ôn tập riêng những từ đã lưu.
+- Xóa từ khỏi danh sách yêu thích.
+
+---
+
+# PHẦN IV. PHÂN HỆ GIÁO VIÊN
+
+Thiết kế một DASHBOARD GIÁO VIÊN riêng, hiện đại, có phong cách xanh công nghệ thống nhất với trang học sinh.
+
+Hiển thị dòng:
+
+**HỆ THỐNG QUẢN LÝ HỌC TẬP – GIÁO VIÊN NGUYỄN THỊ CHÂU**
+
+## 1. Quản lý lớp học
+
+Cho phép giáo viên:
+
+- Tạo lớp học mới.
+- Đặt tên lớp.
+- Khai báo năm học.
+- Thêm học sinh.
+- Nhập danh sách từ Excel.
+- Chỉnh sửa thông tin lớp.
+- Chuyển học sinh sang lớp phù hợp.
+- Xem tình trạng tham gia của từng học sinh.
+- Lọc, tìm kiếm và sắp xếp danh sách.
+
+Bảng danh sách học sinh có các cột:
+
+STT | Mã học sinh | Họ tên | Lớp | Số từ đã học | Số bài hoàn thành | Điểm TB | Lần hoạt động cuối | Trạng thái
+
+Có tìm kiếm theo họ tên, mã học sinh và lớp.
+
+Không sử dụng dữ liệu cá nhân học sinh thật để tạo dữ liệu mẫu.
+
+## 2. Giao nhiệm vụ học tập
+
+Giáo viên có thể:
+
+- Chọn lớp.
+- Chọn bài học.
+- Chọn bộ từ vựng.
+- Chọn hình thức học.
+- Giao Flashcard.
+- Giao bài luyện tập.
+- Giao bài kiểm tra.
+- Chọn ngày bắt đầu và hạn nộp.
+- Cài đặt số lần làm.
+- Thêm hướng dẫn của giáo viên.
+- Gửi thông báo cho học sinh.
+
+Học sinh đăng nhập sẽ thấy nhiệm vụ được giao.
+
+Giáo viên có thể xem trạng thái chưa bắt đầu, đang thực hiện, đã hoàn thành và quá hạn.
+
+## 3. Theo dõi kết quả học sinh
+
+Tạo bảng kết quả chi tiết:
+
+STT | Mã HS | Họ tên | Lớp | Bài học | Số lần làm | Số câu đúng | Điểm | Thời gian hoàn thành | Trạng thái
+
+Chức năng lọc:
+- Theo lớp.
+- Theo khối.
+- Theo bài học.
+- Theo chủ đề.
+- Theo thời gian.
+- Theo mức điểm.
+- Theo trạng thái tham gia.
+
+Giáo viên nhấn vào một học sinh sẽ thấy:
+- Hồ sơ học tập.
+- Lịch sử các lần làm bài.
+- Tỷ lệ ghi nhớ từ.
+- Các thuật ngữ thường trả lời sai.
+- Tiến độ so với những lần học trước.
+- Hoạt động tự học đã được ghi nhận.
+
+## 4. Bảng thống kê
+
+Tạo các thẻ thống kê:
+
+- Tổng số học sinh.
+- Số học sinh đã tham gia.
+- Số học sinh chưa tham gia.
+- Số bài kiểm tra đã hoàn thành.
+- Tỷ lệ hoàn thành.
+- Điểm trung bình theo lớp.
+- Số từ học sinh đã học.
+- Tỷ lệ trả lời đúng theo từng từ.
+
+Sử dụng Recharts để tạo:
+
+- Biểu đồ cột kết quả theo lớp.
+- Biểu đồ tròn tỷ lệ hoàn thành.
+- Biểu đồ đường thể hiện tiến bộ theo thời gian.
+- Biểu đồ các từ sai nhiều nhất.
+- Biểu đồ so sánh kết quả kiểm tra trước và sau khi học.
+
+Số liệu phải lấy từ cơ sở dữ liệu thực, không được dùng số minh họa và trình bày như dữ liệu thật.
+
+Nếu chưa có dữ liệu, hiện trạng thái "Chưa có dữ liệu học tập".
+
+## 5. Xuất báo cáo
+
+Có nút **XUẤT EXCEL**.
+
+Cho phép xuất:
+
+- Danh sách học sinh.
+- Điểm kiểm tra.
+- Tiến độ học tập.
+- Tổng hợp kết quả theo lớp.
+- Báo cáo số học sinh tham gia.
+- Danh sách học sinh chưa hoàn thành.
+- Các từ học sinh còn hạn chế.
+
+File Excel phải có tiêu đề, tên trường, tên giáo viên, tên lớp, năm học và ngày xuất báo cáo.
+
+Dữ liệu xuất phải đúng với bộ lọc đang áp dụng.
+
+---
+
+# PHẦN V. QUẢN LÝ NGÂN HÀNG TỪ VỰNG
+
+Đây là phân hệ quan trọng nhất đối với giáo viên.
+
+## 1. Thêm từ vựng thủ công
+
+Tạo form thêm từ gồm:
+
+- Khối lớp.
+- Bộ sách.
+- Định hướng.
+- Chủ đề.
+- Bài học.
+- Từ tiếng Anh.
+- Phiên âm.
+- Loại từ.
+- Nghĩa tiếng Việt.
+- Giải thích theo ngữ cảnh Tin học.
+- Ví dụ tiếng Anh.
+- Dịch ví dụ.
+- URL hình minh họa hoặc tệp hình được tải lên.
+- Phân loại: từ SGK đã xác minh / từ mở rộng / từ gợi ý.
+- Trang SGK tham chiếu nếu đã kiểm chứng.
+- Độ khó.
+- Trạng thái xuất bản.
+
+Có các chức năng:
+- Thêm.
+- Lưu.
+- Sửa.
+- Xóa có xác nhận.
+- Sao chép từ sang bài khác.
+- Tìm kiếm từ.
+- Lọc theo lớp và bài.
+- Kiểm tra từ trùng.
+- Xem trước trước khi xuất bản.
+
+Thay đổi phải được lưu xuống Firebase.
+
+## 2. Nhập từ vựng bằng Excel
+
+Tạo chức năng nhập tệp .xlsx và .csv.
+
+Sử dụng thư viện hỗ trợ xử lý Excel như SheetJS hoặc thư viện tương đương đáng tin cậy.
+
+Cung cấp nút **TẢI FILE EXCEL MẪU**.
+
+File mẫu có các cột:
+
+grade | textbook | orientation | topic | lesson | english | ipa | partOfSpeech | vietnamese | explanation | example | exampleTranslation | level | sourceType | sourcePage
+
+Quy trình:
+1. Giáo viên chọn tệp.
+2. Hệ thống đọc dữ liệu.
+3. Hiển thị bảng xem trước.
+4. Kiểm tra các cột bắt buộc.
+5. Cảnh báo từ trùng hoặc dữ liệu lỗi.
+6. Giáo viên xác nhận.
+7. Nhập dữ liệu hợp lệ vào Firestore.
+8. Thông báo số dòng thành công và số dòng lỗi.
+
+Có chức năng xuất ngân hàng từ vựng ra Excel để giáo viên sao lưu.
+
+## 3. AI hỗ trợ tạo từ vựng
+
+Tạo khu vực **TRỢ LÝ AI TỪ VỰNG TIN HỌC**.
+
+Giáo viên có thể:
+- Tải hình ảnh trang SGK.
+- Tải PDF học liệu.
+- Nhập văn bản bài học.
+- Nhập chủ đề muốn mở rộng.
+
+AI phân tích nội dung và đề xuất:
+- Thuật ngữ tiếng Anh.
+- Nghĩa tiếng Việt.
+- Phiên âm nếu xác định được.
+- Giải thích thuật ngữ.
+- Ví dụ thực tế.
+- Cấp độ khó.
+- Bộ câu hỏi luyện tập.
+
+Kết quả AI chỉ ở trạng thái "Chờ giáo viên duyệt".
+
+Không được tự động xuất bản toàn bộ từ vựng AI tạo ra.
+
+Không đưa dữ liệu cá nhân học sinh vào yêu cầu AI.
+
+API key của Gemini phải được sử dụng qua máy chủ, không để lộ trong mã nguồn phía trình duyệt.
+
+Nếu chưa cấu hình API, hiển thị thông báo và cho phép nhập từ thủ công bình thường.
+
+---
+
+# PHẦN VI. TRÒ CHƠI VÀ KHUYẾN KHÍCH HỌC TẬP
+
+Thiết kế giao diện trò chơi sinh động, phù hợp lứa tuổi THPT.
+
+Có thể bổ sung:
+
+- IT Vocabulary Challenge.
+- Ghép từ siêu tốc.
+- Ai là chuyên gia Tin học?
+- Thử thách 10 từ mỗi ngày.
+- Vòng quay ôn tập.
+- Cuộc đua ghi nhớ Flashcard.
+
+Tạo huy hiệu:
+- Chăm chỉ.
+- Người học tích cực.
+- Chinh phục HTML.
+- Chuyên gia từ vựng.
+- Hoàn thành thử thách.
+
+Huy hiệu được tính từ các hoạt động có dữ liệu thật.
+
+Không bắt buộc công khai điểm và thứ hạng cá nhân của học sinh cho toàn trường.
+
+---
+
+# PHẦN VII. CƠ SỞ DỮ LIỆU VÀ ĐĂNG NHẬP
+
+Sử dụng:
+
+- React + TypeScript.
+- Tailwind CSS.
+- Lucide React cho icon.
+- Recharts cho biểu đồ.
+- Firebase Authentication.
+- Cloud Firestore.
+- Backend Node.js khi cần bảo vệ khóa bí mật hoặc xử lý nghiệp vụ đáng tin cậy.
+
+Hãy chủ động sử dụng tính năng tích hợp Firebase trong Google AI Studio, yêu cầu tôi xác nhận cấu hình khi cần.
+
+Thiết kế các collection phù hợp:
+
+1. users
+2. classrooms
+3. enrollments
+4. topics
+5. lessons
+6. vocabulary
+7. assignments
+8. questions
+9. attempts
+10. answers
+11. vocabularyProgress
+12. favorites
+13. notifications
+14. auditLogs
+
+Có liên kết dữ liệu bằng ID rõ ràng.
+
+Quy định phân quyền:
+
+**STUDENT**
+- Đọc những bài học được phép truy cập.
+- Xem và cập nhật tiến độ cá nhân qua nghiệp vụ hợp lệ.
+- Nộp bài làm.
+- Chỉ xem kết quả của bản thân.
+
+**TEACHER**
+- Quản lý những lớp được phân công.
+- Thêm và chỉnh sửa từ vựng được cấp quyền.
+- Giao bài.
+- Xem và xuất kết quả học sinh thuộc lớp phụ trách.
+
+**ADMIN**
+- Quản lý tài khoản và phân quyền.
+- Phê duyệt giáo viên.
+- Cấu hình hệ thống.
+- Xem nhật ký hoạt động và sao lưu dữ liệu.
+
+Không được cấp quyền giáo viên hoặc admin chỉ dựa vào một biến do trình duyệt gửi lên.
+
+Tài khoản quản trị ban đầu phải được thiết lập bằng quy trình an toàn, có xác thực danh tính và không dùng mật khẩu mẫu công khai.
+
+Viết Firestore Security Rules phù hợp, mặc định từ chối truy cập trái phép.
+
+Hạn chế thu thập thông tin cá nhân không cần thiết và bảo vệ dữ liệu học sinh.
+
+---
+
+# PHẦN VIII. TRANG CHỦ VÀ DASHBOARD CHUYÊN NGHIỆP
+
+Thiết kế trang chủ giống ảnh tham chiếu.
+
+Ở chế độ học sinh, hiển thị:
+
+- Lời chào người học.
+- Thông tin lớp.
+- Bài học đang học.
+- Thanh tiến độ.
+- Nhiệm vụ hôm nay.
+- Bộ từ cần ôn tập.
+- Các thẻ chức năng.
+- Danh sách chủ đề SGK.
+
+Ở chế độ giáo viên, hiển thị:
+
+- Lời chào giáo viên Nguyễn Thị Châu.
+- Tổng số lớp quản lý.
+- Tổng học sinh.
+- Tỷ lệ tham gia.
+- Những nhiệm vụ đang giao.
+- Các học sinh chưa hoàn thành.
+- Biểu đồ kết quả học tập.
+- Nút nhanh để thêm từ và giao bài.
+
+Cung cấp chức năng xem trước từng chế độ nếu đang ở môi trường demo.
+
+Không cho phép chế độ demo vượt qua phân quyền của hệ thống thật.
+
+---
+
+# PHẦN IX. TÍNH NĂNG TÌM KIẾM VÀ THÔNG BÁO
+
+Tạo thanh tìm kiếm thông minh cho phép tìm:
+
+- Từ tiếng Anh.
+- Nghĩa tiếng Việt.
+- Chủ đề.
+- Bài học.
+- Thuật ngữ liên quan.
+
+Tạo hệ thống thông báo:
+
+- Giáo viên giao bài mới.
+- Bài sắp hết hạn.
+- Bài đã được hoàn thành.
+- Giáo viên cập nhật từ vựng mới.
+- Học sinh có bộ từ cần ôn tập.
+
+Thông báo phải lưu trạng thái đã đọc và chưa đọc.
+
+---
+
+# PHẦN X. TRẢI NGHIỆM NGƯỜI DÙNG
+
+Giao diện phải đáp ứng:
+
+- Hiệu ứng chuyển trang mượt.
+- Sidebar có thể thu gọn.
+- Các card có hiệu ứng hover.
+- Flashcard có hiệu ứng lật.
+- Loading khi tải dữ liệu.
+- Toast khi lưu thành công hoặc xảy ra lỗi.
+- Hộp thoại xác nhận trước khi xóa.
+- Thông báo khi chưa có dữ liệu.
+- Kiểm tra dữ liệu nhập vào.
+- Bảo vệ khỏi nhấn nút gửi bài nhiều lần.
+- Hỗ trợ bàn phím.
+- Nút và chữ có kích thước dễ thao tác.
+- Hiển thị tiếng Việt chuẩn.
+- Tối ưu cho phòng máy học sinh.
+- Hỗ trợ màn hình điện thoại.
+
+Các biểu đồ cần có nhãn rõ ràng, dễ hiểu, có thể xem chi tiết khi cần.
+
+Không sử dụng quá nhiều hiệu ứng gây rối mắt hoặc giảm hiệu suất.
+
+---
+
+# PHẦN XI. CHẾ ĐỘ DEMO VÀ DỮ LIỆU MẪU
+
+Để tôi có thể xem thử ứng dụng ngay, hãy tạo dữ liệu mẫu minh họa.
+
+Tạo:
+- Ba khối lớp 10, 11, 12.
+- Một số chủ đề Tin học.
+- Bài học mẫu về HTML.
+- Một bộ từ vựng Tin học đủ để thử Flashcard và kiểm tra.
+- Một vài lớp học giả định.
+- Một số mã học sinh giả định.
+- Các kết quả học tập minh họa.
+
+Tất cả dữ liệu mẫu phải được đánh dấu rõ là "DỮ LIỆU DEMO".
+
+Tạo nút chuyển sang chế độ xem thử, không yêu cầu phải có dữ liệu thật để xem giao diện.
+
+Dữ liệu demo cần tách khỏi dữ liệu thật.
+
+Không được hiển thị điểm giả như kết quả học sinh thực tế.
+
+Khi Firebase đã được cấu hình, việc tạo, sửa, xóa từ vựng, giao bài và nộp bài phải có thể lưu và đọc lại từ cơ sở dữ liệu.
+
+---
+
+# PHẦN XII. CÁC QUY TRÌNH BẮT BUỘC PHẢI CHẠY ĐƯỢC
+
+Hãy hoàn thiện và kiểm tra các quy trình đầu cuối sau:
+
+**Quy trình học sinh:**
+
+Đăng nhập → vào đúng lớp → chọn bài → học từ vựng → nghe phát âm → học Flashcard → luyện tập → làm kiểm tra → nộp bài → xem điểm và tiến độ đã lưu.
+
+**Quy trình giáo viên:**
+
+Đăng nhập → mở lớp học → xem danh sách học sinh → chọn bộ từ → giao nhiệm vụ → xem kết quả → lọc theo lớp → xuất Excel.
+
+**Quy trình quản lý từ mới:**
+
+Đăng nhập giáo viên → chọn bài học → thêm từ → lưu → kiểm tra từ hiển thị cho học sinh → chỉnh sửa → cập nhật → nhập/xuất Excel.
+
+**Quy trình kiểm tra dữ liệu:**
+
+Học sinh làm bài → hệ thống lưu kết quả → học sinh đăng xuất → đăng nhập lại → kết quả vẫn tồn tại → giáo viên đăng nhập → thấy chính xác kết quả tương ứng.
+
+Cần kiểm thử việc một học sinh không thể xem kết quả riêng của học sinh khác và không thể tự nâng quyền thành giáo viên.
+
+---
+
+# PHẦN XIII. CHẤT LƯỢNG MÃ NGUỒN
+
+Viết mã rõ ràng, dễ bảo trì.
+
+- Chia thành các component tái sử dụng.
+- Không dồn toàn bộ mã vào một file lớn.
+- Không tạo các nút chỉ để trang trí.
+- Không dùng dữ liệu giả thay thế dữ liệu thật mà không thông báo.
+- Không lưu mật khẩu dạng văn bản thuần.
+- Không để lộ khóa bí mật.
+- Kiểm tra lỗi kết nối và lỗi dữ liệu.
+- Giữ nguyên dữ liệu khi thay đổi giao diện.
+- Sử dụng TypeScript để kiểm soát kiểu dữ liệu.
+- Tạo các trạng thái loading, empty, success và error.
+- Tối ưu hiệu suất khi có nhiều học sinh và nhiều từ vựng.
+
+Nếu một chức năng phụ thuộc cấu hình dịch vụ chưa có, hãy hiển thị trạng thái "Cần cấu hình" thay vì giả vờ hoạt động.
+
+---
+
+# PHẦN XIV. THỨ TỰ TRIỂN KHAI
+
+Hãy tự động triển khai theo thứ tự:
+
+Bước 1. Phân tích ảnh tham chiếu, xác định hệ thống màu, bố cục và component.
+
+Bước 2. Tạo giao diện trang chủ hoàn chỉnh, giống ảnh mẫu.
+
+Bước 3. Tạo các trang học sinh, giáo viên và quản trị.
+
+Bước 4. Tạo cấu trúc SGK lớp 10, 11, 12 và bộ từ mẫu.
+
+Bước 5. Tạo chức năng học từ, Flashcard, luyện tập và kiểm tra.
+
+Bước 6. Thiết lập Firebase Authentication, Cloud Firestore và phân quyền.
+
+Bước 7. Kết nối chức năng quản lý học sinh, giao bài, kết quả và báo cáo.
+
+Bước 8. Hoàn thiện thêm, sửa, xóa và nhập/xuất từ vựng Excel.
+
+Bước 9. Tích hợp AI hỗ trợ từ vựng nếu môi trường đã có quyền truy cập Gemini API.
+
+Bước 10. Kiểm thử các chức năng, sửa lỗi build và lỗi runtime.
+
+Không dừng lại ở việc giải thích sẽ làm như thế nào. Hãy trực tiếp tạo các tệp mã nguồn của ứng dụng.
+
+Nếu có giới hạn kỹ thuật, hãy ưu tiên hoàn thiện các chức năng cốt lõi, giữ nguyên cấu trúc mã dễ mở rộng và nêu rõ chức năng nào chưa thể hoạt động.
+
+---
+
+# PHẦN XV. KẾT QUẢ CUỐI CÙNG
+
+Tôi muốn nhận được một WEBSITE IT ENGLISH LEARNING hoàn chỉnh có:
+
+1. Giao diện màu xanh công nghệ giống ảnh minh họa.
+2. Header đầy đủ thông tin trường và giáo viên.
+3. Sidebar đầy đủ các phân hệ.
+4. Trang chủ đẹp với banner và các thẻ chức năng.
+5. Kho bài học cho lớp 10, 11, 12 theo bộ sách Kết nối tri thức với cuộc sống.
+6. Học từ vựng có phát âm và ví dụ.
+7. Flashcard tương tác.
+8. Các trò chơi và bài luyện tập.
+9. Hệ thống kiểm tra và chấm điểm.
+10. Hồ sơ và kết quả cá nhân học sinh.
+11. Dashboard quản lý giáo viên.
+12. Danh sách lớp và danh sách học sinh.
+13. Hệ thống giao bài và thống kê.
+14. Ngân hàng từ vựng chỉnh sửa được.
+15. Nhập và xuất Excel.
+16. Tích hợp cơ sở dữ liệu và phân quyền an toàn.
+17. Giao diện responsive, sử dụng tốt trên điện thoại.
+18. Có chế độ demo hoạt động để xem thử.
+19. Có khả năng triển khai lên Internet để học sinh sử dụng bằng đường link.
+
+**ƯU TIÊN CAO NHẤT:**
+
+- Giữ đúng phong cách và bố cục hình ảnh mẫu.
+- Giữ nguyên tên trường và tên giáo viên.
+- Màu xanh công nghệ hiện đại.
+- Phông chữ Furuta theo điều kiện đã nêu.
+- Tất cả nội dung tiếng Việt chuẩn dấu.
+- Các phân hệ phải hoạt động thực tế.
+- Học sinh sử dụng dễ dàng.
+- Giáo viên quản lý đơn giản.
+- Có thể bổ sung từ mới liên tục.
+- Có khả năng lưu trữ, truy xuất và thống kê kết quả học tập lâu dài.
+
+**BÂY GIỜ HÃY BẮT ĐẦU TẠO ỨNG DỤNG WEB THỰC TẾ TRONG GOOGLE AI STUDIO BUILD MODE, HIỂN THỊ BẢN XEM TRƯỚC ĐẦY ĐỦ VÀ CHỦ ĐỘNG KIỂM TRA, SỬA CÁC LỖI PHÁT SINH.**

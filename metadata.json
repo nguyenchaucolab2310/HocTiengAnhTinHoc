@@ -1,0 +1,6 @@
+{
+  "name": "IT English Learning - Tin Học THPT",
+  "description": "Website học từ vựng tiếng Anh chuyên ngành Tin học THPT - Trường PT DTNT THPT Bình Thuận - GV Nguyễn Thị Châu",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
